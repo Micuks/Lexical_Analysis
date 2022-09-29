@@ -30,6 +30,7 @@ void SymbolList::add(Symbol &symbol) {
     if (idxSymbol == sl.end()) {
         // Symbol that has never appeared before
         sl.push_back(Symbol(symbol));
+        numSymbol++;
     } else {
         // Symbol that has already exists in symbolList
         idxSymbol->incCount();
@@ -57,7 +58,7 @@ Symbol &SymbolList::operator[](const int &i) { return sl[i]; }
 
 ostream &operator<<(ostream &os, SymbolList &symbolList) {
     int numSymbol = symbolList.getNumSymbol();
-    os << "Number of symbols: " << numSymbol;
+    os << numSymbol << " symbols" << endl;
     for (int i = 0; i < numSymbol; i++) {
         os << symbolList[i] << endl;
     }

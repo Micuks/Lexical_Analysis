@@ -39,8 +39,10 @@ void Lex::process() {
     // initial state
     int state = 0;
     while (!end) {
+        // cout << "pForward[" << pForward << "]" << endl;
         get_char();
-        cout << "pForward[" << pForward << "]"<< endl;
+        // cout << "pForward[" << pForward << "]" << endl;
+        // cout << "ch[" << ch << "]" << endl;
         if (ch != EOF) {
             numChar++;
         }
@@ -146,16 +148,24 @@ void Lex::process() {
                 case '"':
                     state = 22;
                     break;
+                case ',':
+                    addSymbol("delimeter", ",");
+                    break;
+                case ';':
+                    addSymbol("delimeter", ";");
+                    break;
                 case ' ':
                 case '\n':
                 case EOF:
                     break;
                 default:
-                    string err = "Illegal char " + to_string(ch);
+                    string err = "Illegal char " + to_string(ch) + ' ';
+                    cout << ch;
                     logError(err);
                     break;
                 }
             }
+            break;
         case 1: // Identifer state
             if (is_letter() || is_digit()) {
                 cat();
@@ -458,8 +468,11 @@ void Lex::process() {
 
 void Lex::print() {
     // print number of lines, chars
-    cout << numLines << "lines, " << numChar << "characters" << endl;
+    cout << endl;
+    cout << "======Statistic information======" << endl;
+    cout << numLines << " lines, " << numChar << " characters, ";
     // print SymbolList
     sl.print();
+    cout << "======End of statistic information======" << endl;
 }
 } // namespace parser

@@ -51,11 +51,7 @@ class Lex {
     bool is_digit() { return (ch >= '0' && ch <= '9'); }
     bool is_keyword() { return (keywords.find(bufStr) != keywords.end()); }
     void cat() {
-        // DEBUG
-        cout << "ch[" << ch << "]\n";
         bufStr.push_back(ch);
-        // DEBUG
-        cout << "bufStr[" << bufStr << "]\n";
     } // concat ch to the end of bufStr.
     void clrStr() { bufStr.clear(); }
     void unget_char() {

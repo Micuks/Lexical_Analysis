@@ -13,14 +13,17 @@ namespace parser {
 using namespace std;
 class Symbol {
   public:
-    Symbol() : notation("NULL"), property("NULL"), count(0) {}
-    Symbol(string _notation, string _property, int _count = 0)
+    Symbol() : notation("NULL"), property("NULL"), count(1) {}
+    Symbol(string _notation, string _property, int _count = 1)
         : notation(_notation), property(_property), count(_count) {}
     string getNotation() { return notation; }
     string getProperty() { return property; }
     void incCount() { count++; }
     int getCount() { return count; }
-    string toString() { return "<" + notation + ", " + property + ">"; }
+    string toString() {
+        return "<" + notation + ", " + property + ">" + " appeared " +
+               to_string(getCount()) + " times";
+    }
     bool operator==(const Symbol &rSymbol) {
         // Two symbols have same notation and property
         return (notation == rSymbol.notation && property == rSymbol.property);
