@@ -71,7 +71,7 @@ class Lex {
     void addSymbol(const string &notation, const string &property = "") {
         Symbol sym(notation, property);
         sl.add(sym);
-        cout << sym;
+        cout << sym.toString();
     }
 
     // log zone

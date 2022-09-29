@@ -5,7 +5,7 @@ using namespace std;
 
 // class Symbol
 ostream &operator<<(ostream &os, Symbol &symbol) {
-    os << symbol.toString();
+    os << symbol.toStringWithCount();
     return os;
 }
 

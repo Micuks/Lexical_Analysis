@@ -20,7 +20,8 @@ class Symbol {
     string getProperty() { return property; }
     void incCount() { count++; }
     int getCount() { return count; }
-    string toString() {
+    string toString() { return "<" + notation + ", " + property + ">"; }
+    string toStringWithCount() {
         return "<" + notation + ", " + property + ">" + " appeared " +
                to_string(getCount()) + " times";
     }

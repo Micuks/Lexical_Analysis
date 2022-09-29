@@ -59,10 +59,13 @@ void Lex::process() {
         }
         // separate line with ; instead if \n
         // when not in char or string state
-        if (ch == ';') {
-            if (state != 21 && state != 22) {
-                numLines++;
-            }
+        // if (ch == ';') {
+        //     if (state != 21 && state != 22) {
+        //         numLines++;
+        //     }
+        // }
+        if (ch == '\n') {
+            numLines++;
         }
 
         switch (state) {
@@ -148,6 +151,8 @@ void Lex::process() {
                 case '"':
                     state = 22;
                     break;
+                case '.':
+                    addSymbol("postfix operator", ".");
                 case ',':
                     addSymbol("delimeter", ",");
                     break;
@@ -155,12 +160,14 @@ void Lex::process() {
                     addSymbol("delimeter", ";");
                     break;
                 case ' ':
+                case '	':
                 case '\n':
                 case EOF:
                     break;
                 default:
-                    string err = "Illegal char " + to_string(ch) + ' ';
-                    cout << ch;
+                    stringstream ss;
+                    ss << "Illegal char \'" << ch << "\' ";
+                    string err = ss.str();
                     logError(err);
                     break;
                 }
@@ -175,7 +182,7 @@ void Lex::process() {
                 if (is_keyword()) {
                     addSymbol("keyword", bufStr);
                 } else {
-                    addSymbol("id", bufStr);
+                    addSymbol("identifer", bufStr);
                 }
                 // Unget last char from buffer.
                 unget_char();
@@ -383,13 +390,52 @@ void Lex::process() {
             }
             break;
         case 18:
-            if (ch == '=') {
+            if (ch == '/') {
+                // "//" comment state
+                state = 181;
+                break;
+            } else if (ch == '*') {
+                // "/*" comment state
+                state = 182;
+                break;
+            } else if (ch == '=') {
                 addSymbol("arith-op", "/=");
                 state = 0;
             } else {
                 addSymbol("arith-op", "/");
                 state = 0;
                 unget_char();
+            }
+            break;
+        case 181:
+            // state //
+            if (ch == '\n') {
+                // end of "//" comment line
+                state = 0;
+            } else {
+                state = 181;
+            }
+            break;
+        case 182:
+            // state /*
+            if (ch == '*') {
+                // transfer to state /* *
+                state = 183;
+            } else {
+                // stay in state /*
+                state = 182;
+            }
+        case 183:
+            // state /* *
+            if (ch == '/') {
+                // state /* */, exit comment state
+                state = 0;
+            } else if (ch == '*') {
+                // state /* ****...., stay in current state
+                state = 183;
+            } else {
+                // fallback to state /*
+                state = 182;
             }
             break;
         case 19:
@@ -425,16 +471,21 @@ void Lex::process() {
             break;
         case 211:
             if (ch == '\'') {
-                // valid char, save and exit
-                state = 0;
-                addSymbol("char", bufStr);
-                clrStr();
+                // end of char, may or may not be valid
+                if (bufStr.length() == 1) {
+                    // valid char, return to state 0
+                    state = 0;
+                    addSymbol("char", bufStr);
+                    clrStr();
+                } else {
+                    // invalid char, longer than 1 character.
+                    state = 0;
+                    logError("Char exceeding the limit length ");
+                    clrStr();
+                }
             } else {
-                // invalid char, longer than 1 character.
-                state = 0;
-                logError("Too long char");
-                unget_char();
-                clrStr();
+                state = 211;
+                cat();
             }
             break;
         case 22:
