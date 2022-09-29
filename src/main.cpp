@@ -1,6 +1,7 @@
-#include "parser.h"
+#include "Lex.h"
+#include "Symbol.h"
 
-namespace parser {
+using namespace parser;
 using namespace std;
 
 int main(int argc, char **argv) {
@@ -11,4 +12,3 @@ int main(int argc, char **argv) {
 
     return 0;
 }
-} // namespace parser

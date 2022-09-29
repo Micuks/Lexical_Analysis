@@ -1,9 +1,26 @@
-#include "parser.h"
+#include "Lex.h"
 
 namespace parser {
 using namespace std;
 
 // Lex
+Lex::Lex(const string &filename) : numLines(0), numChar(0), pForward(-1) {
+    // load c source file
+    try {
+        fs.open(FNAME);
+    } catch (ifstream::failure &e) {
+        cout << "Exception opening file.\n";
+    }
+    vector<string> vecKeywords(
+        {"auto",   "switch",   "case",     "for",    "do",     "while",
+         "int",    "char",     "float",    "double", "if",     "else",
+         "return", "break",    "continue", "const",  "enum",   "extern",
+         "goto",   "register", "restrict", "short",  "signed", "unsigned",
+         "sizeof", "static",   "inline",   "struct", "class",  "typedef",
+         "union",  "void",     "volatile"});
+    keywords = unordered_set<string>(vecKeywords.begin(), vecKeywords.end());
+};
+
 void Lex::process() {
     // end of analysis process sign
     bool end = false;
@@ -23,6 +40,7 @@ void Lex::process() {
     int state = 0;
     while (!end) {
         get_char();
+        cout << "pForward[" << pForward << "]"<< endl;
         if (ch != EOF) {
             numChar++;
         }
@@ -440,6 +458,8 @@ void Lex::process() {
 
 void Lex::print() {
     // print number of lines, chars
+    cout << numLines << "lines, " << numChar << "characters" << endl;
     // print SymbolList
+    sl.print();
 }
 } // namespace parser
