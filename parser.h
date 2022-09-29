@@ -1,6 +1,7 @@
 #ifndef PARSER_H
 #define PARSER_H
 
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -10,16 +11,17 @@
 const int BUFFER_SIZE = 1024;
 const std::string FNAME = "sin";
 
-namespace std {
 namespace parser {
+using namespace std;
 
-unordered_set<string> keywords = {
-    "auto",   "switch",   "case",     "for",    "do",     "while",
-    "int",    "char",     "float",    "double", "if",     "else",
-    "return", "break",    "continue", "const",  "enum",   "extern",
-    "goto",   "register", "restrict", "short",  "signed", "unsigned",
-    "sizeof", "static",   "inline",   "struct", "class",  "typedef",
-    "union",  "void",     "volatile"};
+vector<string> vecKeywords(
+    {"auto",   "switch",   "case",     "for",    "do",     "while",
+     "int",    "char",     "float",    "double", "if",     "else",
+     "return", "break",    "continue", "const",  "enum",   "extern",
+     "goto",   "register", "restrict", "short",  "signed", "unsigned",
+     "sizeof", "static",   "inline",   "struct", "class",  "typedef",
+     "union",  "void",     "volatile"});
+unordered_set<string> keywords(vecKeywords.begin(), vecKeywords.end());
 
 class Symbol {
   public:
@@ -43,11 +45,14 @@ class Symbol {
 class SymbolList {
   public:
     SymbolList();
-    bool add(Symbol symbol);
-    bool
+    void add(const Symbol &symbol);
+    void
     add(const string &notation,
         const string &property); // TODO: when symbol already exists, count+1;
                                  // else create new symbol in SymbolList.
+    vector<Symbol>::iterator find(const Symbol &symbol);
+    vector<Symbol>::iterator find(const string &notation,
+                                  const string &propert);
     bool del(const Symbol &symbol);
     bool del(const string &pattern);
     Symbol find(const string &pattern);
@@ -77,7 +82,7 @@ class Lex {
             cout << "Exception closing file.\n";
         }
     }
-    SymbolList process();
+    void process();
     void print();
 
   private:
@@ -125,5 +130,4 @@ class Lex {
     }
 };
 } // namespace parser
-} // namespace std
 #endif
