@@ -7,7 +7,7 @@ using namespace std;
 Lex::Lex(const string &filename) : numLines(0), numChar(0), pForward(-1) {
     // load c source file
     try {
-        fs.open(FNAME);
+        fs.open(filename);
     } catch (ifstream::failure &e) {
         cout << "Exception opening file.\n";
     }
@@ -120,23 +120,23 @@ void Lex::process() {
                     state = 20;
                     break;
                 case '(':
-                    addSymbol("block_symbol", "(");
+                    addSymbol("brace", "(");
                     // TODO case '?'
                     break;
                 case ')':
-                    addSymbol("block_symbol", ")");
+                    addSymbol("brace", ")");
                     break;
                 case '{':
-                    addSymbol("block_symbol", "{");
+                    addSymbol("brace", "{");
                     break;
                 case '}':
-                    addSymbol("block_symbol", "}");
+                    addSymbol("brace", "}");
                     break;
                 case '[':
-                    addSymbol("block_symbol", "[");
+                    addSymbol("brace", "[");
                     break;
                 case ']':
-                    addSymbol("block_symbol", "]");
+                    addSymbol("brace", "]");
                     break;
                 case '\'':
                     state = 21;
