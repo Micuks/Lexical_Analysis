@@ -1,0 +1,7 @@
+int main() {
+  char ch = 'a'; // comment
+  char[] str = "hello world"; /* also
+  comment*/
+  int num = 13;
+  printf("%s", str)
+}
