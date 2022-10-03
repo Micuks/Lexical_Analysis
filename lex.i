@@ -10,6 +10,7 @@
 %}
  
 %x ML_COMMENT
+%x S_CHAR
  
 alpha       [a-zA-Z]
 digit       [0-9]
@@ -19,29 +20,29 @@ print       [ -~]
 IDENTIFIER          {alpha}+{alnum}*
 INTEGER     "0"|[0-9]{digit}*
 FLOAT       "0"|{digit}*"."{digit}+
-CHAR        (\'{print}\')|(\'\\[nftrbv]\')
-STRING      \"{print}*\"
+CHAR        ("'"{print}"'")|("\'""\\"[nftrbv0]"\'")
+STRING      \".*\"
 KEYWORD     "auto"|"switch"|"case"|"for"|"do"|"while"|"int"|"char"|"float"|"double"|"if"|"else"|"return"|"break"|"continue"|"const"|"enum"|"extern"|"goto"|"register"|"restrict"|"short"|"signed"|"unsigned"|"sizeof"|"static"|"inline"|"struct"|"class"|"typedef"|"union"|"void"|"volatile"
  
 %%
  
-"//".*                  { printf("Jumped single line comment at line %d\n", numLines); } 
+"//".*                  { ; } 
  
-"/*"                    { printf("Jumped multi-line comment from line %d ", numLines); BEGIN(ML_COMMENT); }
-<ML_COMMENT>"*/"        { printf("to line %d\n", numLines); BEGIN(INITIAL); }
+"/*"                    { BEGIN(ML_COMMENT); }
+<ML_COMMENT>"*/"        { BEGIN(INITIAL); }
 <ML_COMMENT>[^*\n]+     
 <ML_COMMENT>"*"         
 <ML_COMMENT>"\n"        { numLines += 1; }
  
  
-KEYWORD                 { ret_print("KEYWORD");}
+KEYWORD                 { ret_print("keyword");}
  
  
-"+"|"-"|"*"|"/"|"++"|"--"|"+="|"-="|"*="|"/="       { ret_print("arith-op"); }
+"+"|"-"|"*"|"/"|"++"|"--"|"+="|"-="|"*="|"/="|"%"|"%="       { ret_print("arith-op"); }
 "|"|"&"|"~"|"|="|"&="|"~="|"<<"|"<<="|">>"|">>="    { ret_print("bitop"); }
 "&&"|"||"                                           { ret_print("logic-op"); }
 "="                                                 { ret_print("assign-op"); }
-"=="|"!="|"!"|">"|"<"|">="|"<="                     { ret_print("RELOP"); }
+"=="|"!="|"!"|">"|"<"|">="|"<="                     { ret_print("relop"); }
  
  
 "("|")"|"]"|"["|"{"|"}"    { ret_print("brace"); }
@@ -58,7 +59,7 @@ KEYWORD                 { ret_print("KEYWORD");}
  
  
 "\n"            { numLines += 1; }
-[ \t\r\f]+          /* jump whitespace */
+[ 　\t\r\f]+          /* jump whitespace */
  
 .               { yyerror("Unrecognized character"); }
  
@@ -70,7 +71,7 @@ void ret_print(char *token_type){
  
 void yyerror(char *message){
     printf("ERROR: \"%s\" in L%d. Token = %s\n", message, numLines, yytext);
-    exit(1);
+    /* exit(1); */
 }
  
 int main(int argc, char *argv[]){

@@ -12,3 +12,5 @@ docs/report.log
 docs/report.fls
 docs/report.fdb_latexmk
 .DS_Store
+lex.yy.c
+c_lex

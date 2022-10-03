@@ -1,4 +1,4 @@
-\subsection{C++版本}
+\subsection{C++版实现}
 出于模块化, 解耦合, 可扩展性和可读性考虑, 将词法分析程序划分为\textbf{符号和符号表}
 与\textbf{词法分析处理和输入输出}两个模块, 分别在 Symbol.h, Symbol.cpp, Lex.h和Lex.cpp
 四个源代码文件中进行实现, 并使用CMake作为构建工具.
@@ -24,7 +24,7 @@ main.cpp承担着作为词法分析程序入口的功能.
 词法分析处理和输出类Lex的成员和方法实现;
 \lstinputlisting{../src/Lex.cpp}
 
-\subsection{FLEX版本}
+\subsection{FLEX版实现}
 在C++版本实现思路的基础上, 通过学习FLEX的语法, 用FLEX实现了相同功能的版本.
 \subsubsection{FLEX介绍}
 \paragraph{基本结构}

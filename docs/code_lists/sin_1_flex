@@ -1,0 +1,31 @@
+L1: 	<keyword, int>
+L1: 	<identifier, main>
+L1: 	<brace, (>
+L1: 	<brace, )>
+L1: 	<brace, {>
+L2: 	<keyword, char>
+L2: 	<identifier, ch>
+L2: 	<assign-op, =>
+L2: 	<char, 'a'>
+L2: 	<delimeter, ;>
+Jumped single line comment at line 2
+L3: 	<keyword, char>
+L3: 	<brace, [>
+L3: 	<brace, ]>
+L3: 	<identifier, str>
+L3: 	<assign-op, =>
+L3: 	<string, "hello world">
+L3: 	<delimeter, ;>
+Jumped multi-line comment from line 3 to line 4
+L5: 	<keyword, int>
+L5: 	<identifier, num>
+L5: 	<assign-op, =>
+L5: 	<integer, 13>
+L5: 	<delimeter, ;>
+L6: 	<identifier, printf>
+L6: 	<brace, (>
+L6: 	<string, "%s">
+L6: 	<delimeter, ,>
+L6: 	<identifier, str>
+L6: 	<brace, )>
+L7: 	<brace, }>

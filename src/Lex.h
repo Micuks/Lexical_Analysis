@@ -78,7 +78,7 @@ class Lex {
 
     // log zone
     void logError(const string &err) {
-        string msg = "ERROR: " + err + "in L" + to_string(numLines);
+        string msg = "ERROR: " + err + "in L" + to_string(numLines+1);
         cout << msg << endl;
     }
 };

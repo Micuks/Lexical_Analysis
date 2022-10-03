@@ -18,8 +18,7 @@ Lex::Lex(const string &filename) : numLines(0), numChar(0), pForward(-1) {
          "goto",   "register", "restrict", "short",  "signed", "unsigned",
          "sizeof", "static",   "inline",   "struct", "class",  "typedef",
          "union",  "void",     "volatile"});
-    keywords = unordered_set<string>(
-            vecKeywords.begin(), vecKeywords.end());
+    keywords = unordered_set<string>(vecKeywords.begin(), vecKeywords.end());
 };
 
 void Lex::process() {
@@ -457,6 +456,10 @@ void Lex::process() {
                 state = 0;
                 logError("Empty char");
                 unget_char();
+            } else if (ch == '\\') {
+                // escape character
+                cat();
+                state = 21;
             } else {
                 cat();
                 state = 211; // check whether next char is '
@@ -465,20 +468,15 @@ void Lex::process() {
         case 211:
             if (ch == '\'') {
                 // end of char, may or may not be valid
-                if (bufStr.length() == 1) {
-                    // valid char, return to state 0
-                    state = 0;
-                    addSymbol("char", bufStr);
-                    clrStr();
-                } else {
-                    // invalid char, longer than 1 character.
-                    state = 0;
-                    logError("Char exceeding the limit length ");
-                    clrStr();
-                }
+                // valid char, return to state 0
+                state = 0;
+                addSymbol("char", bufStr);
+                clrStr();
             } else {
-                state = 211;
-                cat();
+                // invalid char, longer than 1 character.
+                state = 0;
+                logError("Char exceeding the limit length ");
+                clrStr();
             }
             break;
         case 22:
