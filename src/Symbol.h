@@ -20,14 +20,17 @@ class Symbol {
     string getProperty() { return property; }
     void incCount() { count++; }
     int getCount() { return count; }
-    string toString() { return "<" + notation + ", " + property + ">"; }
+    string toString() {
+      return "<" + notation + ", " + property + ">";
+    }
     string toStringWithCount() {
-        return "<" + notation + ", " + property + ">" + " appeared " +
-               to_string(getCount()) + " times";
+        return "<" + notation + ", " + property + ">"
+          + " appeared " + to_string(getCount()) + " times";
     }
     bool operator==(const Symbol &rSymbol) {
         // Two symbols have same notation and property
-        return (notation == rSymbol.notation && property == rSymbol.property);
+        return
+          (notation == rSymbol.notation && property == rSymbol.property);
     }
     friend ostream &operator<<(ostream &os, Symbol &symbol);
 
@@ -46,14 +49,11 @@ class SymbolList {
     void add(Symbol &symbol);
     void
     add(const string &notation,
-        const string &property); // TODO: when symbol already exists, count+1;
-                                 // else create new symbol in SymbolList.
+        const string &property);
     vector<Symbol>::iterator find(Symbol &symbol);
     vector<Symbol>::iterator find(const string &notation,
                                   const string &property);
     int getNumSymbol() const { return numSymbol; }
-    // bool del(const Symbol &symbol);
-    // bool del(const string &pattern);
     Symbol find(const string &pattern);
     string toString();
     void print();

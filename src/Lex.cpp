@@ -18,7 +18,8 @@ Lex::Lex(const string &filename) : numLines(0), numChar(0), pForward(-1) {
          "goto",   "register", "restrict", "short",  "signed", "unsigned",
          "sizeof", "static",   "inline",   "struct", "class",  "typedef",
          "union",  "void",     "volatile"});
-    keywords = unordered_set<string>(vecKeywords.begin(), vecKeywords.end());
+    keywords = unordered_set<string>(
+            vecKeywords.begin(), vecKeywords.end());
 };
 
 void Lex::process() {
@@ -57,13 +58,6 @@ void Lex::process() {
         if (ch == EOF && pForward != BUFFER_SIZE - 1) {
             end = true;
         }
-        // separate line with ; instead if \n
-        // when not in char or string state
-        // if (ch == ';') {
-        //     if (state != 21 && state != 22) {
-        //         numLines++;
-        //     }
-        // }
         if (ch == '\n') {
             numLines++;
         }
@@ -86,7 +80,6 @@ void Lex::process() {
                 }
             } else {
                 switch (ch) {
-                // TODO: implement comment parse
                 case '<':
                     state = 8;
                     break;

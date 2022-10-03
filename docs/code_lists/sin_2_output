@@ -1,0 +1,1666 @@
+L1: <keyword, typedef>
+L1: <keyword, struct>
+L2: <identifer, huf>
+L2: <block_symbol, {>
+L2: <keyword, int>
+L2: <identifer, weight>
+L2: <delimeter, ;>
+L3: <keyword, int>
+L3: <identifer, parent>
+L3: <delimeter, ,>
+L3: <identifer, lchild>
+L3: <delimeter, ,>
+L3: <identifer, rchild>
+L3: <delimeter, ;>
+L4: <block_symbol, }>
+L4: <identifer, HTNode>
+L4: <delimeter, ,>
+L4: <arith-op, *>
+L4: <identifer, Huffmantree>
+L4: <delimeter, ;>
+L6: <identifer, FILE>
+L6: <arith-op, *>
+L6: <identifer, fptr>
+L6: <assign-op, =>
+L6: <identifer, NULL>
+L6: <delimeter, ;>
+L8: <identifer, Huffmantree>
+L8: <identifer, HT>
+L8: <assign-op, =>
+L8: <identifer, NULL>
+L8: <delimeter, ;>
+L11: <keyword, int>
+L11: <identifer, filetype>
+L11: <block_symbol, (>
+L11: <keyword, char>
+L11: <identifer, ch>
+L11: <block_symbol, [>
+L11: <block_symbol, ]>
+L11: <block_symbol, )>
+L12: <block_symbol, {>
+L12: <keyword, int>
+L12: <identifer, i>
+L12: <assign-op, =>
+L12: <delimeter, ,>
+L12: <identifer, n>
+L12: <delimeter, ;>
+L13: <keyword, while>
+L13: <block_symbol, (>
+L13: <identifer, ch>
+L13: <block_symbol, [>
+L13: <identifer, i>
+L13: <block_symbol, ]>
+L13: <relop, !=>
+ERROR: Char exceeding the limit length in L12
+L13: <block_symbol, )>
+L14: <block_symbol, {>
+L14: <keyword, if>
+L14: <block_symbol, (>
+L14: <identifer, ch>
+L14: <block_symbol, [>
+L14: <identifer, i>
+L14: <block_symbol, ]>
+L14: <relop, ==>
+L14: <char, .>
+L14: <block_symbol, )>
+L15: <identifer, n>
+L15: <assign-op, =>
+L15: <identifer, i>
+L15: <delimeter, ;>
+L16: <identifer, i>
+L16: <arith-op, ++>
+L16: <delimeter, ;>
+L16: <block_symbol, }>
+L17: <keyword, return>
+L17: <identifer, n>
+L17: <delimeter, ;>
+L17: <block_symbol, }>
+L20: <keyword, void>
+L20: <identifer, Select>
+L20: <block_symbol, (>
+L20: <keyword, int>
+L20: <identifer, n>
+L20: <delimeter, ,>
+L20: <keyword, int>
+L20: <arith-op, *>
+L20: <identifer, s1>
+L20: <delimeter, ,>
+L20: <keyword, int>
+L20: <arith-op, *>
+L20: <identifer, s2>
+L20: <block_symbol, )>
+L21: <block_symbol, {>
+L21: <keyword, int>
+L21: <identifer, i>
+L21: <delimeter, ,>
+L21: <identifer, temp>
+L21: <delimeter, ;>
+L22: <keyword, for>
+L22: <block_symbol, (>
+L22: <identifer, i>
+L22: <assign-op, =>
+L22: <delimeter, ;>
+L22: <identifer, i>
+L22: <relop, <=>
+L22: <identifer, n>
+L22: <delimeter, ;>
+L22: <identifer, i>
+L22: <arith-op, ++>
+L22: <block_symbol, )>
+L23: <keyword, if>
+L23: <block_symbol, (>
+L23: <identifer, HT>
+L23: <block_symbol, [>
+L23: <identifer, i>
+L23: <block_symbol, ]>
+L23: <postfix operator, .>
+L23: <delimeter, ,>
+L23: <identifer, weight>
+L23: <relop, >>
+L23: <logic-op, &&>
+L23: <identifer, HT>
+L23: <block_symbol, [>
+L23: <identifer, i>
+L23: <block_symbol, ]>
+L23: <postfix operator, .>
+L23: <delimeter, ,>
+L23: <identifer, parent>
+L23: <relop, ==>
+L23: <arith-op, ->
+L23: <integer, 1>
+L23: <block_symbol, )>
+L24: <block_symbol, {>
+L24: <arith-op, *>
+L24: <identifer, s1>
+L24: <assign-op, =>
+L24: <identifer, i>
+L24: <delimeter, ;>
+L25: <keyword, break>
+L25: <delimeter, ;>
+L25: <block_symbol, }>
+L26: <keyword, for>
+L26: <block_symbol, (>
+L26: <identifer, i>
+L26: <assign-op, =>
+L26: <identifer, i>
+L26: <arith-op, +>
+L26: <integer, 1>
+L26: <delimeter, ;>
+L26: <identifer, i>
+L26: <relop, <=>
+L26: <identifer, n>
+L26: <delimeter, ;>
+L26: <identifer, i>
+L26: <arith-op, ++>
+L26: <block_symbol, )>
+L27: <block_symbol, {>
+L27: <keyword, if>
+L27: <block_symbol, (>
+L27: <identifer, HT>
+L27: <block_symbol, [>
+L27: <identifer, i>
+L27: <block_symbol, ]>
+L27: <postfix operator, .>
+L27: <delimeter, ,>
+L27: <identifer, weight>
+L27: <relop, >>
+L27: <logic-op, &&>
+L27: <identifer, HT>
+L27: <block_symbol, [>
+L27: <identifer, i>
+L27: <block_symbol, ]>
+L27: <postfix operator, .>
+L27: <delimeter, ,>
+L27: <identifer, parent>
+L27: <relop, ==>
+L27: <arith-op, ->
+L27: <integer, 1>
+L27: <block_symbol, )>
+L28: <block_symbol, {>
+L28: <arith-op, *>
+L28: <identifer, s2>
+L28: <assign-op, =>
+L28: <identifer, i>
+L28: <delimeter, ;>
+L29: <keyword, break>
+L29: <delimeter, ;>
+L29: <block_symbol, }>
+L30: <block_symbol, }>
+L31: <keyword, if>
+L31: <block_symbol, (>
+L31: <identifer, HT>
+L31: <block_symbol, [>
+L31: <arith-op, *>
+L31: <identifer, s2>
+L31: <block_symbol, ]>
+L31: <postfix operator, .>
+L31: <delimeter, ,>
+L31: <identifer, weight>
+L31: <relop, <>
+L31: <identifer, HT>
+L31: <block_symbol, [>
+L31: <arith-op, *>
+L31: <identifer, s1>
+L31: <block_symbol, ]>
+L31: <postfix operator, .>
+L31: <delimeter, ,>
+L31: <identifer, weight>
+L31: <block_symbol, )>
+L32: <block_symbol, {>
+L32: <identifer, temp>
+L32: <assign-op, =>
+L32: <arith-op, *>
+L32: <identifer, s1>
+L32: <delimeter, ;>
+L33: <arith-op, *>
+L33: <identifer, s1>
+L33: <assign-op, =>
+L33: <arith-op, *>
+L33: <identifer, s2>
+L33: <delimeter, ;>
+L34: <arith-op, *>
+L34: <identifer, s2>
+L34: <assign-op, =>
+L34: <identifer, temp>
+L34: <delimeter, ;>
+L35: <block_symbol, }>
+L36: <keyword, for>
+L36: <block_symbol, (>
+L36: <identifer, i>
+L36: <assign-op, =>
+L36: <identifer, i>
+L36: <arith-op, +>
+L36: <integer, 1>
+L36: <delimeter, ;>
+L36: <identifer, i>
+L36: <relop, <=>
+L36: <identifer, n>
+L36: <delimeter, ;>
+L36: <identifer, i>
+L36: <arith-op, ++>
+L36: <block_symbol, )>
+L37: <keyword, if>
+L37: <block_symbol, (>
+L37: <identifer, HT>
+L37: <block_symbol, [>
+L37: <identifer, i>
+L37: <block_symbol, ]>
+L37: <postfix operator, .>
+L37: <delimeter, ,>
+L37: <identifer, weight>
+L37: <relop, >>
+L37: <logic-op, &&>
+L37: <identifer, HT>
+L37: <block_symbol, [>
+L37: <identifer, i>
+L37: <block_symbol, ]>
+L37: <postfix operator, .>
+L37: <delimeter, ,>
+L37: <identifer, parent>
+L37: <relop, ==>
+L37: <arith-op, ->
+L37: <integer, 1>
+L37: <block_symbol, )>
+L38: <keyword, if>
+L38: <block_symbol, (>
+L38: <identifer, HT>
+L38: <block_symbol, [>
+L38: <identifer, i>
+L38: <block_symbol, ]>
+L38: <postfix operator, .>
+L38: <delimeter, ,>
+L38: <identifer, weight>
+L38: <relop, <>
+L38: <identifer, HT>
+L38: <block_symbol, [>
+L38: <arith-op, *>
+L38: <identifer, s1>
+L38: <block_symbol, ]>
+L38: <postfix operator, .>
+L38: <delimeter, ,>
+L38: <identifer, weight>
+L38: <block_symbol, )>
+L39: <block_symbol, {>
+L39: <arith-op, *>
+L39: <identifer, s2>
+L39: <assign-op, =>
+L39: <arith-op, *>
+L39: <identifer, s1>
+L39: <delimeter, ;>
+L40: <arith-op, *>
+L40: <identifer, s1>
+L40: <assign-op, =>
+L40: <identifer, i>
+L40: <delimeter, ;>
+L40: <block_symbol, }>
+L41: <keyword, else>
+L41: <keyword, if>
+L41: <block_symbol, (>
+L41: <identifer, HT>
+L41: <block_symbol, [>
+L41: <identifer, i>
+L41: <block_symbol, ]>
+L41: <postfix operator, .>
+L41: <delimeter, ,>
+L41: <identifer, weight>
+L41: <relop, <>
+L41: <identifer, HT>
+L41: <block_symbol, [>
+L41: <arith-op, *>
+L41: <identifer, s2>
+L41: <block_symbol, ]>
+L41: <postfix operator, .>
+L41: <delimeter, ,>
+L41: <identifer, weight>
+L41: <block_symbol, )>
+L42: <arith-op, *>
+L42: <identifer, s2>
+L42: <assign-op, =>
+L42: <identifer, i>
+L42: <delimeter, ;>
+L43: <keyword, return>
+L43: <delimeter, ;>
+L44: <block_symbol, }>
+L47: <keyword, int>
+L47: <identifer, CreateHuffmantree>
+L47: <block_symbol, (>
+L47: <keyword, char>
+L47: <identifer, filename>
+L47: <block_symbol, [>
+L47: <block_symbol, ]>
+L47: <block_symbol, )>
+L48: <block_symbol, {>
+L48: <keyword, int>
+L48: <identifer, i>
+L48: <delimeter, ,>
+L48: <identifer, k>
+L48: <delimeter, ,>
+L48: <identifer, n>
+L48: <assign-op, =>
+L48: <delimeter, ;>
+L49: <keyword, int>
+L49: <identifer, s1>
+L49: <delimeter, ,>
+L49: <identifer, s2>
+L49: <delimeter, ;>
+L50: <identifer, HT>
+L50: <assign-op, =>
+L50: <block_symbol, (>
+L50: <identifer, Huffmantree>
+L50: <block_symbol, )>
+L50: <identifer, malloc>
+L50: <block_symbol, (>
+L50: <keyword, sizeof>
+L50: <block_symbol, (>
+L50: <identifer, HTNode>
+L50: <block_symbol, )>
+L50: <arith-op, *>
+L50: <integer, 512>
+L50: <block_symbol, )>
+L50: <delimeter, ;>
+L51: <keyword, if>
+L51: <block_symbol, (>
+L51: <block_symbol, (>
+L51: <identifer, fptr>
+L51: <assign-op, =>
+L51: <identifer, fopen>
+L51: <block_symbol, (>
+L51: <identifer, filename>
+L51: <delimeter, ,>
+L51: <string, rb>
+L51: <block_symbol, )>
+L51: <block_symbol, )>
+L51: <relop, ==>
+L51: <identifer, NULL>
+L51: <block_symbol, )>
+L52: <block_symbol, {>
+L52: <identifer, printf>
+L52: <block_symbol, (>
+L52: <string, can't open the source file\n>
+L52: <block_symbol, )>
+L52: <delimeter, ;>
+L53: <keyword, return>
+L53: <delimeter, ;>
+L53: <block_symbol, }>
+L54: <keyword, for>
+L54: <block_symbol, (>
+L54: <identifer, i>
+L54: <assign-op, =>
+L54: <delimeter, ;>
+L54: <identifer, i>
+L54: <relop, <=>
+L54: <integer, 255>
+L54: <delimeter, ;>
+L54: <identifer, i>
+L54: <arith-op, ++>
+L54: <block_symbol, )>
+L55: <block_symbol, {>
+L55: <identifer, HT>
+L55: <block_symbol, [>
+L55: <identifer, i>
+L55: <block_symbol, ]>
+L55: <postfix operator, .>
+L55: <delimeter, ,>
+L55: <identifer, parent>
+L55: <assign-op, =>
+L55: <identifer, HT>
+L55: <block_symbol, [>
+L55: <identifer, i>
+L55: <block_symbol, ]>
+L55: <postfix operator, .>
+L55: <delimeter, ,>
+L55: <identifer, lchild>
+L55: <assign-op, =>
+L55: <identifer, HT>
+L55: <block_symbol, [>
+L55: <identifer, i>
+L55: <block_symbol, ]>
+L55: <postfix operator, .>
+L55: <delimeter, ,>
+L55: <identifer, rchild>
+L55: <assign-op, =>
+L55: <arith-op, ->
+L55: <integer, 1>
+L55: <delimeter, ;>
+L56: <identifer, HT>
+L56: <block_symbol, [>
+L56: <identifer, i>
+L56: <block_symbol, ]>
+L56: <postfix operator, .>
+L56: <delimeter, ,>
+L56: <identifer, weight>
+L56: <assign-op, =>
+L56: <delimeter, ;>
+L56: <block_symbol, }>
+L57: <keyword, while>
+L57: <block_symbol, (>
+L57: <block_symbol, (>
+L57: <identifer, k>
+L57: <assign-op, =>
+L57: <identifer, fgetc>
+L57: <block_symbol, (>
+L57: <identifer, fptr>
+L57: <block_symbol, )>
+L57: <block_symbol, )>
+L57: <relop, !=>
+L57: <identifer, EOF>
+L57: <block_symbol, )>
+L58: <block_symbol, {>
+L58: <keyword, if>
+L58: <block_symbol, (>
+L58: <identifer, HT>
+L58: <block_symbol, [>
+L58: <identifer, k>
+L58: <block_symbol, ]>
+L58: <postfix operator, .>
+L58: <delimeter, ,>
+L58: <identifer, weight>
+L58: <relop, ==>
+L58: <block_symbol, )>
+L59: <identifer, n>
+L59: <arith-op, ++>
+L59: <delimeter, ;>
+L60: <identifer, HT>
+L60: <block_symbol, [>
+L60: <identifer, k>
+L60: <block_symbol, ]>
+L60: <postfix operator, .>
+L60: <delimeter, ,>
+L60: <identifer, weight>
+L60: <arith-op, ++>
+L60: <delimeter, ;>
+L61: <block_symbol, }>
+L62: <identifer, rewind>
+L62: <block_symbol, (>
+L62: <identifer, fptr>
+L62: <block_symbol, )>
+L62: <delimeter, ;>
+L63: <keyword, for>
+L63: <block_symbol, (>
+L63: <identifer, i>
+L63: <assign-op, =>
+L63: <integer, 256>
+L63: <delimeter, ;>
+L63: <identifer, i>
+L63: <relop, <>
+L63: <integer, 256>
+L63: <arith-op, +>
+L63: <identifer, n>
+L63: <arith-op, ->
+L63: <integer, 1>
+L63: <delimeter, ;>
+L63: <identifer, i>
+L63: <arith-op, ++>
+L63: <block_symbol, )>
+L64: <block_symbol, {>
+L64: <identifer, Select>
+L64: <block_symbol, (>
+L64: <identifer, i>
+L64: <arith-op, ->
+L64: <integer, 1>
+L64: <delimeter, ,>
+L64: <bitop, &>
+L64: <identifer, s1>
+L64: <delimeter, ,>
+L64: <bitop, &>
+L64: <identifer, s2>
+L64: <block_symbol, )>
+L64: <delimeter, ;>
+L65: <identifer, HT>
+L65: <block_symbol, [>
+L65: <identifer, s1>
+L65: <block_symbol, ]>
+L65: <postfix operator, .>
+L65: <delimeter, ,>
+L65: <identifer, parent>
+L65: <assign-op, =>
+L65: <identifer, i>
+L65: <delimeter, ;>
+L66: <identifer, HT>
+L66: <block_symbol, [>
+L66: <identifer, s2>
+L66: <block_symbol, ]>
+L66: <postfix operator, .>
+L66: <delimeter, ,>
+L66: <identifer, parent>
+L66: <assign-op, =>
+L66: <identifer, i>
+L66: <delimeter, ;>
+L67: <identifer, HT>
+L67: <block_symbol, [>
+L67: <identifer, i>
+L67: <block_symbol, ]>
+L67: <postfix operator, .>
+L67: <delimeter, ,>
+L67: <identifer, lchild>
+L67: <assign-op, =>
+L67: <identifer, s1>
+L67: <delimeter, ;>
+L68: <identifer, HT>
+L68: <block_symbol, [>
+L68: <identifer, i>
+L68: <block_symbol, ]>
+L68: <postfix operator, .>
+L68: <delimeter, ,>
+L68: <identifer, rchild>
+L68: <assign-op, =>
+L68: <identifer, s2>
+L68: <delimeter, ;>
+L69: <identifer, HT>
+L69: <block_symbol, [>
+L69: <identifer, i>
+L69: <block_symbol, ]>
+L69: <postfix operator, .>
+L69: <delimeter, ,>
+L69: <identifer, weight>
+L69: <assign-op, =>
+L69: <identifer, HT>
+L69: <block_symbol, [>
+L69: <identifer, s1>
+L69: <block_symbol, ]>
+L69: <postfix operator, .>
+L69: <delimeter, ,>
+L69: <identifer, weight>
+L69: <arith-op, +>
+L69: <identifer, HT>
+L69: <block_symbol, [>
+L69: <identifer, s2>
+L69: <block_symbol, ]>
+L69: <postfix operator, .>
+L69: <delimeter, ,>
+L69: <identifer, weight>
+L69: <delimeter, ;>
+L70: <identifer, HT>
+L70: <block_symbol, [>
+L70: <identifer, i>
+L70: <block_symbol, ]>
+L70: <postfix operator, .>
+L70: <delimeter, ,>
+L70: <identifer, parent>
+L70: <assign-op, =>
+L70: <arith-op, ->
+L70: <integer, 1>
+L70: <delimeter, ;>
+L71: <block_symbol, }>
+L72: <keyword, return>
+L72: <identifer, n>
+L72: <delimeter, ;>
+L73: <block_symbol, }>
+L76: <keyword, char>
+L76: <arith-op, *>
+L76: <arith-op, *>
+L76: <identifer, CreateHuffmancode>
+L76: <block_symbol, (>
+L76: <keyword, int>
+L76: <identifer, n>
+L76: <block_symbol, )>
+L77: <block_symbol, {>
+L77: <keyword, int>
+L77: <identifer, i>
+L77: <delimeter, ,>
+L77: <identifer, j>
+L77: <delimeter, ,>
+L77: <identifer, start>
+L77: <delimeter, ,>
+L77: <identifer, pre>
+L77: <delimeter, ;>
+L78: <keyword, char>
+L78: <arith-op, *>
+L78: <arith-op, *>
+L78: <identifer, HC>
+L78: <assign-op, =>
+L78: <block_symbol, (>
+L78: <keyword, char>
+L78: <arith-op, *>
+L78: <arith-op, *>
+L78: <block_symbol, )>
+L78: <identifer, malloc>
+L78: <block_symbol, (>
+L78: <keyword, sizeof>
+L78: <block_symbol, (>
+L78: <keyword, char>
+L78: <arith-op, *>
+L78: <block_symbol, )>
+L78: <arith-op, *>
+L78: <integer, 256>
+L78: <block_symbol, )>
+L78: <delimeter, ;>
+L79: <keyword, for>
+L79: <block_symbol, (>
+L79: <identifer, i>
+L79: <assign-op, =>
+L79: <delimeter, ;>
+L79: <identifer, i>
+L79: <relop, <>
+L79: <integer, 256>
+L79: <delimeter, ;>
+L79: <identifer, i>
+L79: <arith-op, ++>
+L79: <block_symbol, )>
+L80: <identifer, HC>
+L80: <block_symbol, [>
+L80: <identifer, i>
+L80: <block_symbol, ]>
+L80: <assign-op, =>
+L80: <block_symbol, (>
+L80: <keyword, char>
+L80: <arith-op, *>
+L80: <block_symbol, )>
+L80: <identifer, malloc>
+L80: <block_symbol, (>
+L80: <keyword, sizeof>
+L80: <block_symbol, (>
+L80: <keyword, char>
+L80: <block_symbol, )>
+L80: <arith-op, *>
+L80: <block_symbol, (>
+L80: <identifer, n>
+L80: <arith-op, +>
+L80: <integer, 1>
+L80: <block_symbol, )>
+L80: <block_symbol, )>
+L80: <delimeter, ;>
+L81: <keyword, char>
+L81: <identifer, cd>
+L81: <block_symbol, [>
+L81: <identifer, n>
+L81: <block_symbol, ]>
+L81: <delimeter, ;>
+L82: <identifer, cd>
+L82: <block_symbol, [>
+L82: <identifer, n>
+L82: <arith-op, ->
+L82: <integer, 1>
+L82: <block_symbol, ]>
+L82: <assign-op, =>
+ERROR: Char exceeding the limit length in L81
+L82: <delimeter, ;>
+L84: <keyword, for>
+L84: <block_symbol, (>
+L84: <identifer, i>
+L84: <assign-op, =>
+L84: <delimeter, ;>
+L84: <identifer, i>
+L84: <relop, <=>
+L84: <integer, 255>
+L84: <delimeter, ;>
+L84: <identifer, i>
+L84: <arith-op, ++>
+L84: <block_symbol, )>
+L85: <block_symbol, {>
+L85: <keyword, if>
+L85: <block_symbol, (>
+L85: <identifer, HT>
+L85: <block_symbol, [>
+L85: <identifer, i>
+L85: <block_symbol, ]>
+L85: <postfix operator, .>
+L85: <delimeter, ,>
+L85: <identifer, weight>
+L85: <relop, ==>
+L85: <block_symbol, )>
+L86: <identifer, HC>
+L86: <block_symbol, [>
+L86: <identifer, i>
+L86: <block_symbol, ]>
+L86: <assign-op, =>
+ERROR: Char exceeding the limit length in L85
+L86: <delimeter, ;>
+L88: <keyword, else>
+L88: <block_symbol, {>
+L88: <identifer, start>
+L88: <assign-op, =>
+L88: <identifer, n>
+L88: <arith-op, ->
+L88: <integer, 1>
+L88: <delimeter, ;>
+L89: <identifer, j>
+L89: <assign-op, =>
+L89: <identifer, i>
+L89: <delimeter, ;>
+L90: <identifer, pre>
+L90: <assign-op, =>
+L90: <identifer, HT>
+L90: <block_symbol, [>
+L90: <identifer, j>
+L90: <block_symbol, ]>
+L90: <postfix operator, .>
+L90: <delimeter, ,>
+L90: <identifer, parent>
+L90: <delimeter, ;>
+L91: <keyword, while>
+L91: <block_symbol, (>
+L91: <identifer, pre>
+L91: <relop, !=>
+L91: <arith-op, ->
+L91: <integer, 1>
+L91: <block_symbol, )>
+L92: <block_symbol, {>
+L92: <identifer, start>
+L92: <arith-op, -->
+L92: <delimeter, ;>
+L93: <keyword, if>
+L93: <block_symbol, (>
+L93: <identifer, HT>
+L93: <block_symbol, [>
+L93: <identifer, pre>
+L93: <block_symbol, ]>
+L93: <postfix operator, .>
+L93: <delimeter, ,>
+L93: <identifer, lchild>
+L93: <relop, ==>
+L93: <identifer, j>
+L93: <block_symbol, )>
+L94: <identifer, cd>
+L94: <block_symbol, [>
+L94: <identifer, start>
+L94: <block_symbol, ]>
+L94: <assign-op, =>
+L94: <char, 0>
+L94: <delimeter, ;>
+L96: <keyword, else>
+L96: <identifer, cd>
+L96: <block_symbol, [>
+L96: <identifer, start>
+L96: <block_symbol, ]>
+L96: <assign-op, =>
+L96: <char, 1>
+L96: <delimeter, ;>
+L97: <identifer, j>
+L97: <assign-op, =>
+L97: <identifer, pre>
+L97: <delimeter, ;>
+L98: <identifer, pre>
+L98: <assign-op, =>
+L98: <identifer, HT>
+L98: <block_symbol, [>
+L98: <identifer, j>
+L98: <block_symbol, ]>
+L98: <postfix operator, .>
+L98: <delimeter, ,>
+L98: <identifer, parent>
+L98: <delimeter, ;>
+L99: <block_symbol, }>
+L100: <identifer, strcpy>
+L100: <block_symbol, (>
+L100: <identifer, HC>
+L100: <block_symbol, [>
+L100: <identifer, i>
+L100: <block_symbol, ]>
+L100: <delimeter, ,>
+L100: <bitop, &>
+L100: <identifer, cd>
+L100: <block_symbol, [>
+L100: <identifer, start>
+L100: <block_symbol, ]>
+L100: <block_symbol, )>
+L100: <delimeter, ;>
+L101: <block_symbol, }>
+L102: <block_symbol, }>
+L103: <keyword, return>
+L103: <identifer, HC>
+L103: <delimeter, ;>
+L104: <block_symbol, }>
+L106: <keyword, void>
+L106: <identifer, Huffmandecoding>
+L106: <block_symbol, (>
+L106: <identifer, FILE>
+L106: <arith-op, *>
+L106: <identifer, fptr1>
+L106: <delimeter, ,>
+L106: <keyword, int>
+L106: <identifer, num>
+L106: <delimeter, ,>
+L106: <keyword, int>
+L106: <identifer, pos>
+L106: <delimeter, ,>
+L106: <keyword, char>
+L106: <arith-op, *>
+L106: <identifer, filename>
+L106: <delimeter, ,>
+L106: <keyword, int>
+L106: <identifer, k>
+L106: <block_symbol, )>
+L107: <block_symbol, {>
+L107: <identifer, rewind>
+L107: <block_symbol, (>
+L107: <identifer, fptr1>
+L107: <block_symbol, )>
+L107: <delimeter, ;>
+L108: <identifer, FILE>
+L108: <arith-op, *>
+L108: <identifer, fptr2>
+L108: <delimeter, ;>
+L109: <keyword, char>
+L109: <identifer, objectfile>
+L109: <block_symbol, [>
+L109: <integer, 10>
+L109: <block_symbol, ]>
+L109: <assign-op, =>
+L109: <string, out2>
+L109: <delimeter, ;>
+L110: <identifer, strcat>
+L110: <block_symbol, (>
+L110: <identifer, objectfile>
+L110: <delimeter, ,>
+L110: <bitop, &>
+L110: <identifer, filename>
+L110: <block_symbol, [>
+L110: <identifer, k>
+L110: <block_symbol, ]>
+L110: <block_symbol, )>
+L110: <delimeter, ;>
+L110: <delimeter, ;>
+L111: <keyword, if>
+L111: <block_symbol, (>
+L111: <block_symbol, (>
+L111: <identifer, fptr2>
+L111: <assign-op, =>
+L111: <identifer, fopen>
+L111: <block_symbol, (>
+L111: <identifer, objectfile>
+L111: <delimeter, ,>
+L111: <string, wb>
+L111: <block_symbol, )>
+L111: <block_symbol, )>
+L111: <relop, ==>
+L111: <identifer, NULL>
+L111: <block_symbol, )>
+L112: <identifer, printf>
+L112: <block_symbol, (>
+L112: <string, can't open the object file\n>
+L112: <block_symbol, )>
+L112: <delimeter, ;>
+L113: <keyword, int>
+L113: <identifer, c>
+L113: <delimeter, ;>
+L114: <keyword, int>
+L114: <identifer, i>
+L114: <delimeter, ,>
+L114: <identifer, j>
+L114: <delimeter, ,>
+L114: <identifer, m>
+L114: <delimeter, ,>
+L114: <identifer, p>
+L114: <delimeter, ,>
+L114: <identifer, weight>
+L114: <delimeter, ;>
+L115: <keyword, for>
+L115: <block_symbol, (>
+L115: <identifer, i>
+L115: <assign-op, =>
+L115: <delimeter, ;>
+L115: <identifer, i>
+L115: <relop, <=>
+L115: <integer, 512>
+L115: <delimeter, ;>
+L115: <identifer, i>
+L115: <arith-op, ++>
+L115: <block_symbol, )>
+L116: <keyword, if>
+L116: <block_symbol, (>
+L116: <block_symbol, (>
+L116: <identifer, HT>
+L116: <block_symbol, [>
+L116: <identifer, i>
+L116: <block_symbol, ]>
+L116: <postfix operator, .>
+L116: <delimeter, ,>
+L116: <identifer, parent>
+L116: <relop, ==>
+L116: <arith-op, ->
+L116: <integer, 1>
+L116: <block_symbol, )>
+L116: <logic-op, &&>
+L116: <identifer, HT>
+L116: <block_symbol, [>
+L116: <identifer, i>
+L116: <block_symbol, ]>
+L116: <postfix operator, .>
+L116: <delimeter, ,>
+L116: <identifer, weight>
+L116: <relop, >>
+L116: <block_symbol, )>
+L117: <keyword, break>
+L117: <delimeter, ;>
+L118: <identifer, p>
+L118: <assign-op, =>
+L118: <identifer, i>
+L118: <delimeter, ;>
+L119: <keyword, while>
+L119: <block_symbol, (>
+L119: <block_symbol, (>
+L119: <identifer, c>
+L119: <assign-op, =>
+L119: <identifer, fgetc>
+L119: <block_symbol, (>
+L119: <identifer, fptr1>
+L119: <block_symbol, )>
+L119: <block_symbol, )>
+L119: <relop, !=>
+L119: <identifer, EOF>
+L119: <block_symbol, )>
+L120: <block_symbol, {>
+L120: <identifer, num>
+L120: <arith-op, -->
+L120: <delimeter, ;>
+L121: <keyword, for>
+L121: <block_symbol, (>
+L121: <identifer, weight>
+L121: <assign-op, =>
+L121: <integer, 128>
+L121: <delimeter, ;>
+L121: <identifer, weight>
+L121: <relop, >>
+L121: <delimeter, ;>
+L121: <identifer, weight>
+L121: <assign-op, =>
+L121: <identifer, weight>
+L121: <arith-op, />
+L121: <integer, 2>
+L121: <block_symbol, )>
+L122: <block_symbol, {>
+L122: <identifer, m>
+L122: <assign-op, =>
+L122: <identifer, c>
+L122: <arith-op, />
+L122: <identifer, weight>
+L122: <delimeter, ;>
+L123: <identifer, c>
+L123: <assign-op, =>
+L123: <identifer, c>
+L123: <arith-op, %>
+L123: <identifer, weight>
+L123: <delimeter, ;>
+L124: <keyword, if>
+L124: <block_symbol, (>
+L124: <identifer, m>
+L124: <relop, ==>
+L124: <block_symbol, )>
+L125: <identifer, p>
+L125: <assign-op, =>
+L125: <identifer, HT>
+L125: <block_symbol, [>
+L125: <identifer, p>
+L125: <block_symbol, ]>
+L125: <postfix operator, .>
+L125: <delimeter, ,>
+L125: <identifer, lchild>
+L125: <delimeter, ;>
+L126: <keyword, if>
+L126: <block_symbol, (>
+L126: <identifer, m>
+L126: <relop, ==>
+L126: <integer, 1>
+L126: <block_symbol, )>
+L127: <identifer, p>
+L127: <assign-op, =>
+L127: <identifer, HT>
+L127: <block_symbol, [>
+L127: <identifer, p>
+L127: <block_symbol, ]>
+L127: <postfix operator, .>
+L127: <delimeter, ,>
+L127: <identifer, rchild>
+L127: <delimeter, ;>
+L128: <keyword, if>
+L128: <block_symbol, (>
+L128: <identifer, HT>
+L128: <block_symbol, [>
+L128: <identifer, p>
+L128: <block_symbol, ]>
+L128: <postfix operator, .>
+L128: <delimeter, ,>
+L128: <identifer, lchild>
+L128: <relop, ==>
+L128: <arith-op, ->
+L128: <integer, 1>
+L128: <logic-op, &&>
+L128: <identifer, HT>
+L128: <block_symbol, [>
+L128: <identifer, p>
+L128: <block_symbol, ]>
+L128: <postfix operator, .>
+L128: <delimeter, ,>
+L128: <identifer, rchild>
+L128: <relop, ==>
+L128: <arith-op, ->
+L128: <integer, 1>
+L128: <block_symbol, )>
+L129: <block_symbol, {>
+L129: <identifer, fputc>
+L129: <block_symbol, (>
+L129: <identifer, p>
+L129: <delimeter, ,>
+L129: <identifer, fptr2>
+L129: <block_symbol, )>
+L129: <delimeter, ;>
+L130: <identifer, p>
+L130: <assign-op, =>
+L130: <identifer, i>
+L130: <delimeter, ;>
+L131: <keyword, if>
+L131: <block_symbol, (>
+L131: <identifer, num>
+L131: <relop, ==>
+L131: <arith-op, ->
+L131: <integer, 1>
+L131: <logic-op, &&>
+L131: <identifer, weight>
+L131: <relop, ==>
+L131: <identifer, pos>
+L131: <arith-op, *>
+L131: <integer, 2>
+L131: <block_symbol, )>
+L132: <keyword, break>
+L132: <delimeter, ;>
+L132: <block_symbol, }>
+L133: <block_symbol, }>
+L134: <block_symbol, }>
+L135: <identifer, printf>
+L135: <block_symbol, (>
+L135: <string, 哈夫曼编码结束, 输出到文件>
+L135: <block_symbol, )>
+L135: <delimeter, ;>
+L136: <identifer, fclose>
+L136: <block_symbol, (>
+L136: <identifer, fptr2>
+L136: <block_symbol, )>
+L136: <delimeter, ;>
+L137: <keyword, return>
+L137: <delimeter, ;>
+L138: <block_symbol, }>
+L140: <keyword, int>
+L140: <identifer, main>
+L140: <block_symbol, (>
+L140: <keyword, void>
+L140: <block_symbol, )>
+L141: <block_symbol, {>
+L141: <keyword, int>
+L141: <identifer, n>
+L141: <delimeter, ,>
+L141: <identifer, i>
+L141: <delimeter, ,>
+L141: <identifer, j>
+L141: <delimeter, ,>
+L141: <identifer, k>
+L141: <delimeter, ,>
+L141: <identifer, weight>
+L141: <delimeter, ,>
+L141: <identifer, pos>
+L141: <delimeter, ,>
+L141: <identifer, num>
+L141: <assign-op, =>
+L141: <delimeter, ;>
+L142: <keyword, char>
+L142: <identifer, c>
+L142: <delimeter, ,>
+L142: <identifer, ch>
+L142: <delimeter, ;>
+L143: <keyword, char>
+L143: <arith-op, *>
+L143: <arith-op, *>
+L143: <identifer, HC>
+L143: <delimeter, ;>
+L144: <identifer, FILE>
+L144: <arith-op, *>
+L144: <identifer, fptr0>
+L144: <delimeter, ;>
+L145: <identifer, FILE>
+L145: <arith-op, *>
+L145: <identifer, fptr1>
+L145: <delimeter, ;>
+L146: <keyword, if>
+L146: <block_symbol, (>
+L146: <block_symbol, (>
+L146: <identifer, fptr0>
+L146: <assign-op, =>
+L146: <identifer, fopen>
+L146: <block_symbol, (>
+L146: <string, out0.txt>
+L146: <delimeter, ,>
+L146: <string, w+>
+L146: <block_symbol, )>
+L146: <block_symbol, )>
+L146: <relop, ==>
+L146: <identifer, NULL>
+L146: <block_symbol, )>
+L147: <identifer, printf>
+L147: <block_symbol, (>
+L147: <string, can't open the object file\n>
+L147: <block_symbol, )>
+L147: <delimeter, ;>
+L148: <keyword, if>
+L148: <block_symbol, (>
+L148: <block_symbol, (>
+L148: <identifer, fptr1>
+L148: <assign-op, =>
+L148: <identifer, fopen>
+L148: <block_symbol, (>
+L148: <string, out1.txt>
+L148: <delimeter, ,>
+L148: <string, wb+>
+L148: <block_symbol, )>
+L148: <block_symbol, )>
+L148: <relop, ==>
+L148: <identifer, NULL>
+L148: <block_symbol, )>
+L149: <identifer, printf>
+L149: <block_symbol, (>
+L149: <string, can't open the object file\n>
+L149: <block_symbol, )>
+L149: <delimeter, ;>
+L150: <identifer, printf>
+L150: <block_symbol, (>
+L150: <string, 对象文件无法打开>
+L150: <block_symbol, )>
+L150: <delimeter, ;>
+L151: <keyword, char>
+L151: <identifer, filename>
+L151: <block_symbol, [>
+L151: <integer, 100>
+L151: <block_symbol, ]>
+L151: <delimeter, ;>
+L152: <identifer, gets>
+L152: <block_symbol, (>
+L152: <identifer, filename>
+L152: <block_symbol, )>
+L152: <delimeter, ;>
+L153: <identifer, n>
+L153: <assign-op, =>
+L153: <identifer, CreateHuffmantree>
+L153: <block_symbol, (>
+L153: <identifer, filename>
+L153: <block_symbol, )>
+L153: <delimeter, ;>
+L154: <keyword, if>
+L154: <block_symbol, (>
+L154: <identifer, n>
+L154: <relop, ==>
+L154: <block_symbol, )>
+L155: <keyword, return>
+L155: <delimeter, ;>
+L156: <keyword, if>
+L156: <block_symbol, (>
+L156: <identifer, n>
+L156: <relop, ==>
+L156: <integer, 1>
+L156: <block_symbol, )>
+L157: <block_symbol, {>
+L157: <identifer, rewind>
+L157: <block_symbol, (>
+L157: <identifer, fptr>
+L157: <block_symbol, )>
+L157: <delimeter, ;>
+L158: <keyword, while>
+L158: <block_symbol, (>
+L158: <block_symbol, (>
+L158: <identifer, c>
+L158: <assign-op, =>
+L158: <identifer, fgetc>
+L158: <block_symbol, (>
+L158: <identifer, fptr>
+L158: <block_symbol, )>
+L158: <block_symbol, )>
+L158: <relop, !=>
+L158: <identifer, EOF>
+L158: <block_symbol, )>
+L159: <block_symbol, {>
+L159: <identifer, k>
+L159: <arith-op, ++>
+L159: <delimeter, ;>
+L160: <identifer, ch>
+L160: <assign-op, =>
+L160: <identifer, c>
+L160: <delimeter, ;>
+L161: <identifer, fputc>
+L161: <block_symbol, (>
+L161: <char, 0>
+L161: <delimeter, ,>
+L161: <identifer, fptr0>
+L161: <block_symbol, )>
+L161: <delimeter, ;>
+L162: <keyword, if>
+L162: <block_symbol, (>
+L162: <identifer, k>
+L162: <arith-op, %>
+L162: <integer, 8>
+L162: <relop, ==>
+L162: <block_symbol, )>
+L163: <identifer, fputc>
+L163: <block_symbol, (>
+L163: <block_symbol, (>
+L163: <keyword, char>
+L163: <block_symbol, )>
+L163: <delimeter, ,>
+L163: <identifer, fptr1>
+L163: <block_symbol, )>
+L163: <delimeter, ;>
+L163: <block_symbol, }>
+L164: <identifer, fputc>
+L164: <block_symbol, (>
+L164: <block_symbol, (>
+L164: <keyword, char>
+L164: <block_symbol, )>
+L164: <delimeter, ,>
+L164: <identifer, fptr1>
+L164: <block_symbol, )>
+L164: <delimeter, ;>
+L164: <block_symbol, }>
+L167: <keyword, else>
+L167: <block_symbol, {>
+L167: <identifer, HC>
+L167: <assign-op, =>
+L167: <identifer, CreateHuffmancode>
+L167: <block_symbol, (>
+L167: <identifer, n>
+L167: <block_symbol, )>
+L167: <delimeter, ;>
+L169: <keyword, while>
+L169: <block_symbol, (>
+L169: <block_symbol, (>
+L169: <identifer, i>
+L169: <assign-op, =>
+L169: <identifer, fgetc>
+L169: <block_symbol, (>
+L169: <identifer, fptr>
+L169: <block_symbol, )>
+L169: <block_symbol, )>
+L169: <relop, !=>
+L169: <identifer, EOF>
+L169: <block_symbol, )>
+L170: <identifer, fputs>
+L170: <block_symbol, (>
+L170: <identifer, HC>
+L170: <block_symbol, [>
+L170: <identifer, i>
+L170: <block_symbol, ]>
+L170: <delimeter, ,>
+L170: <identifer, fptr0>
+L170: <block_symbol, )>
+L170: <delimeter, ;>
+L173: <identifer, rewind>
+L173: <block_symbol, (>
+L173: <identifer, fptr0>
+L173: <block_symbol, )>
+L173: <delimeter, ;>
+L174: <identifer, weight>
+L174: <assign-op, =>
+L174: <integer, 128>
+L174: <delimeter, ;>
+L175: <identifer, j>
+L175: <assign-op, =>
+L175: <delimeter, ;>
+L176: <keyword, while>
+L176: <block_symbol, (>
+L176: <block_symbol, (>
+L176: <identifer, i>
+L176: <assign-op, =>
+L176: <identifer, fgetc>
+L176: <block_symbol, (>
+L176: <identifer, fptr0>
+L176: <block_symbol, )>
+L176: <block_symbol, )>
+L176: <relop, !=>
+L176: <identifer, EOF>
+L176: <block_symbol, )>
+L177: <block_symbol, {>
+L177: <identifer, j>
+L177: <arith-op, +=>
+L177: <block_symbol, (>
+L177: <identifer, i>
+L177: <arith-op, ->
+L177: <integer, 48>
+L177: <block_symbol, )>
+L177: <arith-op, *>
+L177: <identifer, weight>
+L177: <delimeter, ;>
+L178: <identifer, weight>
+L178: <assign-op, =>
+L178: <identifer, weight>
+L178: <arith-op, />
+L178: <integer, 2>
+L178: <delimeter, ;>
+L179: <keyword, if>
+L179: <block_symbol, (>
+L179: <identifer, weight>
+L179: <relop, ==>
+L179: <block_symbol, )>
+L180: <block_symbol, {>
+L180: <identifer, weight>
+L180: <assign-op, =>
+L180: <integer, 128>
+L180: <delimeter, ;>
+L181: <identifer, fputc>
+L181: <block_symbol, (>
+L181: <block_symbol, (>
+L181: <keyword, unsigned>
+L181: <keyword, char>
+L181: <block_symbol, )>
+L181: <identifer, j>
+L181: <delimeter, ,>
+L181: <identifer, fptr1>
+L181: <block_symbol, )>
+L181: <delimeter, ;>
+L182: <identifer, num>
+L182: <arith-op, ++>
+L182: <delimeter, ;>
+L183: <identifer, j>
+L183: <assign-op, =>
+L183: <delimeter, ;>
+L183: <block_symbol, }>
+L184: <block_symbol, }>
+L185: <keyword, if>
+L185: <block_symbol, (>
+L185: <identifer, weight>
+L185: <relop, !=>
+L185: <block_symbol, )>
+L186: <block_symbol, {>
+L186: <identifer, fputc>
+L186: <block_symbol, (>
+L186: <identifer, j>
+L186: <delimeter, ,>
+L186: <identifer, fptr1>
+L186: <block_symbol, )>
+L186: <delimeter, ;>
+L187: <identifer, pos>
+L187: <assign-op, =>
+L187: <identifer, weight>
+L187: <delimeter, ;>
+L187: <block_symbol, }>
+L187: <block_symbol, }>
+L188: <identifer, printf>
+L188: <block_symbol, (>
+L188: <string, 处理过程如下:\n>
+L188: <block_symbol, )>
+L188: <delimeter, ;>
+L189: <identifer, c>
+L189: <assign-op, =>
+L189: <identifer, getchar>
+L189: <block_symbol, (>
+L189: <block_symbol, )>
+L189: <delimeter, ;>
+L190: <keyword, if>
+L190: <block_symbol, (>
+L190: <identifer, c>
+L190: <relop, ==>
+L190: <char, y>
+L190: <block_symbol, )>
+L191: <keyword, if>
+L191: <block_symbol, (>
+L191: <identifer, n>
+L191: <relop, >>
+L191: <integer, 1>
+L191: <block_symbol, )>
+L192: <block_symbol, {>
+L193: <identifer, Huffmandecoding>
+L193: <block_symbol, (>
+L193: <identifer, fptr1>
+L193: <delimeter, ,>
+L193: <identifer, num>
+L193: <delimeter, ,>
+L193: <identifer, pos>
+L193: <delimeter, ,>
+L193: <identifer, filename>
+L193: <delimeter, ,>
+L193: <identifer, filetype>
+L193: <block_symbol, (>
+L193: <identifer, filename>
+L193: <block_symbol, )>
+L193: <block_symbol, )>
+L193: <delimeter, ;>
+L194: <identifer, free>
+L194: <block_symbol, (>
+L194: <identifer, HT>
+L194: <block_symbol, )>
+L194: <delimeter, ;>
+L195: <keyword, for>
+L195: <block_symbol, (>
+L195: <identifer, i>
+L195: <assign-op, =>
+L195: <delimeter, ;>
+L195: <identifer, i>
+L195: <relop, <>
+L195: <integer, 256>
+L195: <delimeter, ;>
+L195: <identifer, i>
+L195: <arith-op, ++>
+L195: <block_symbol, )>
+L196: <identifer, free>
+L196: <block_symbol, (>
+L196: <identifer, HC>
+L196: <block_symbol, [>
+L196: <identifer, i>
+L196: <block_symbol, ]>
+L196: <block_symbol, )>
+L196: <delimeter, ;>
+L197: <identifer, free>
+L197: <block_symbol, (>
+L197: <identifer, HC>
+L197: <block_symbol, )>
+L197: <delimeter, ;>
+L197: <block_symbol, }>
+L199: <keyword, else>
+L199: <block_symbol, {>
+L199: <identifer, rewind>
+L199: <block_symbol, (>
+L199: <identifer, fptr1>
+L199: <block_symbol, )>
+L199: <delimeter, ;>
+L200: <identifer, FILE>
+L200: <arith-op, *>
+L200: <identifer, fptr2>
+L200: <delimeter, ;>
+L201: <keyword, char>
+L201: <identifer, objectfile>
+L201: <block_symbol, [>
+L201: <integer, 10>
+L201: <block_symbol, ]>
+L201: <assign-op, =>
+L201: <string, out2>
+L201: <delimeter, ;>
+L202: <identifer, strcat>
+L202: <block_symbol, (>
+L202: <identifer, objectfile>
+L202: <delimeter, ,>
+L202: <bitop, &>
+L202: <identifer, filename>
+L202: <block_symbol, [>
+L202: <identifer, filetype>
+L202: <block_symbol, (>
+L202: <identifer, filename>
+L202: <block_symbol, )>
+L202: <block_symbol, ]>
+L202: <block_symbol, )>
+L202: <delimeter, ;>
+L202: <delimeter, ;>
+L203: <keyword, if>
+L203: <block_symbol, (>
+L203: <block_symbol, (>
+L203: <identifer, fptr2>
+L203: <assign-op, =>
+L203: <identifer, fopen>
+L203: <block_symbol, (>
+L203: <identifer, objectfile>
+L203: <delimeter, ,>
+L203: <string, wb>
+L203: <block_symbol, )>
+L203: <block_symbol, )>
+L203: <relop, ==>
+L203: <identifer, NULL>
+L203: <block_symbol, )>
+L204: <identifer, printf>
+L204: <block_symbol, (>
+L204: <string, can't open the object file\n>
+L204: <block_symbol, )>
+L204: <delimeter, ;>
+L205: <keyword, for>
+L205: <block_symbol, (>
+L205: <identifer, i>
+L205: <assign-op, =>
+L205: <delimeter, ;>
+L205: <identifer, i>
+L205: <relop, <>
+L205: <identifer, k>
+L205: <delimeter, ;>
+L205: <identifer, i>
+L205: <arith-op, ++>
+L205: <block_symbol, )>
+L206: <identifer, fputc>
+L206: <block_symbol, (>
+L206: <identifer, ch>
+L206: <delimeter, ,>
+L206: <identifer, fptr2>
+L206: <block_symbol, )>
+L206: <delimeter, ;>
+L207: <identifer, printf>
+L207: <block_symbol, (>
+L207: <string, 处理结果写入到out2中>
+L207: <block_symbol, )>
+L207: <delimeter, ;>
+L208: <identifer, fclose>
+L208: <block_symbol, (>
+L208: <identifer, fptr2>
+L208: <block_symbol, )>
+L208: <delimeter, ;>
+L208: <block_symbol, }>
+L211: <identifer, fclose>
+L211: <block_symbol, (>
+L211: <identifer, fptr>
+L211: <block_symbol, )>
+L211: <delimeter, ;>
+L212: <identifer, fclose>
+L212: <block_symbol, (>
+L212: <identifer, fptr0>
+L212: <block_symbol, )>
+L212: <delimeter, ;>
+L213: <identifer, fclose>
+L213: <block_symbol, (>
+L213: <identifer, fptr1>
+L213: <block_symbol, )>
+L213: <delimeter, ;>
+L214: <keyword, return>
+L214: <delimeter, ;>
+L215: <block_symbol, }>
+
+======Statistic information======
+215 lines, 4855 characters, 118 symbols
+<keyword, typedef> appeared 1 times
+<keyword, struct> appeared 1 times
+<identifer, huf> appeared 1 times
+<block_symbol, {> appeared 31 times
+<keyword, int> appeared 20 times
+<identifer, weight> appeared 35 times
+<delimeter, ;> appeared 148 times
+<identifer, parent> appeared 11 times
+<delimeter, ,> appeared 86 times
+<identifer, lchild> appeared 6 times
+<identifer, rchild> appeared 5 times
+<block_symbol, }> appeared 31 times
+<identifer, HTNode> appeared 2 times
+<arith-op, *> appeared 39 times
+<identifer, Huffmantree> appeared 3 times
+<identifer, FILE> appeared 6 times
+<identifer, fptr> appeared 8 times
+<assign-op, => appeared 76 times
+<identifer, NULL> appeared 7 times
+<identifer, HT> appeared 39 times
+<identifer, filetype> appeared 3 times
+<block_symbol, (> appeared 127 times
+<keyword, char> appeared 18 times
+<identifer, ch> appeared 6 times
+<block_symbol, [> appeared 55 times
+<block_symbol, ]> appeared 55 times
+<block_symbol, )> appeared 127 times
+<identifer, i> appeared 79 times
+<identifer, n> appeared 22 times
+<keyword, while> appeared 7 times
+<relop, !=> appeared 8 times
+<keyword, if> appeared 27 times
+<relop, ==> appeared 24 times
+<char, .> appeared 1 times
+<arith-op, ++> appeared 15 times
+<keyword, return> appeared 8 times
+<keyword, void> appeared 3 times
+<identifer, Select> appeared 2 times
+<identifer, s1> appeared 13 times
+<identifer, s2> appeared 13 times
+<identifer, temp> appeared 3 times
+<keyword, for> appeared 11 times
+<relop, <=> appeared 6 times
+<postfix operator, .> appeared 36 times
+<relop, >> appeared 6 times
+<logic-op, &&> appeared 6 times
+<arith-op, -> appeared 15 times
+<integer, 1> appeared 20 times
+<keyword, break> appeared 4 times
+<arith-op, +> appeared 5 times
+<relop, <> appeared 7 times
+<keyword, else> appeared 5 times
+<identifer, CreateHuffmantree> appeared 2 times
+<identifer, filename> appeared 11 times
+<identifer, k> appeared 10 times
+<identifer, malloc> appeared 3 times
+<keyword, sizeof> appeared 3 times
+<integer, 512> appeared 2 times
+<identifer, fopen> appeared 5 times
+<string, rb> appeared 1 times
+<identifer, printf> appeared 9 times
+<string, can't open the source file\n> appeared 1 times
+<integer, 255> appeared 2 times
+<identifer, fgetc> appeared 5 times
+<identifer, EOF> appeared 5 times
+<identifer, rewind> appeared 5 times
+<integer, 256> appeared 5 times
+<bitop, &> appeared 5 times
+<identifer, CreateHuffmancode> appeared 2 times
+<identifer, j> appeared 13 times
+<identifer, start> appeared 6 times
+<identifer, pre> appeared 6 times
+<identifer, HC> appeared 10 times
+<identifer, cd> appeared 5 times
+<arith-op, --> appeared 2 times
+<char, 0> appeared 2 times
+<char, 1> appeared 1 times
+<identifer, strcpy> appeared 1 times
+<identifer, Huffmandecoding> appeared 2 times
+<identifer, fptr1> appeared 12 times
+<identifer, num> appeared 6 times
+<identifer, pos> appeared 5 times
+<identifer, fptr2> appeared 8 times
+<identifer, objectfile> appeared 6 times
+<integer, 10> appeared 2 times
+<string, out2> appeared 2 times
+<identifer, strcat> appeared 2 times
+<string, wb> appeared 2 times
+<string, can't open the object file\n> appeared 4 times
+<identifer, c> appeared 10 times
+<identifer, m> appeared 4 times
+<identifer, p> appeared 10 times
+<integer, 128> appeared 3 times
+<arith-op, /> appeared 3 times
+<integer, 2> appeared 3 times
+<arith-op, %> appeared 2 times
+<identifer, fputc> appeared 7 times
+<string, 哈夫曼编码结束, 输出到文件> appeared 1 times
+<identifer, fclose> appeared 5 times
+<identifer, main> appeared 1 times
+<identifer, fptr0> appeared 7 times
+<string, out0.txt> appeared 1 times
+<string, w+> appeared 1 times
+<string, out1.txt> appeared 1 times
+<string, wb+> appeared 1 times
+<string, 对象文件无法打开> appeared 1 times
+<integer, 100> appeared 1 times
+<identifer, gets> appeared 1 times
+<integer, 8> appeared 1 times
+<identifer, fputs> appeared 1 times
+<arith-op, +=> appeared 1 times
+<integer, 48> appeared 1 times
+<keyword, unsigned> appeared 1 times
+<string, 处理过程如下:\n> appeared 1 times
+<identifer, getchar> appeared 1 times
+<char, y> appeared 1 times
+<identifer, free> appeared 3 times
+<string, 处理结果写入到out2中> appeared 1 times
+======End of statistic information======

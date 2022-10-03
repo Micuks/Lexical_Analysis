@@ -47,7 +47,8 @@ void SymbolList::add(const string &notation, const string &property) {
  */
 Symbol SymbolList::find(const string &pattern) {
     for (auto iter = sl.begin(); iter != sl.end(); iter++) {
-        if (iter->getNotation() == pattern || iter->getProperty() == pattern) {
+        if (iter->getNotation() == pattern ||
+                iter->getProperty() == pattern) {
             return *iter;
         }
     }

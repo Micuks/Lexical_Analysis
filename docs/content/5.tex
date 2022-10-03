@@ -1,0 +1,24 @@
+出于模块化, 解耦合, 可扩展性和可读性考虑, 将词法分析程序划分为\textbf{符号和符号表}
+与\textbf{词法分析处理和输入输出}两个模块, 分别在 Symbol.h, Symbol.cpp, Lex.h和Lex.cpp
+四个源代码文件中进行实现, 并使用CMake作为构建工具.
+
+其中, Symbol.h和Symbol.cpp对记号(Symbol)及记号表(SymbolList)的类进行成员和方法定义和实现,
+ Lex.h和Lex.cpp对词法分析处理, 输入和输出类Lex进行成员和方法定义和实现.
+
+main.cpp承担着作为词法分析程序入口的功能.
+
+\subsection{main.cpp}
+词法分析程序入口
+\lstinputlisting{../src/main.cpp}
+\subsection{Symbol.h}
+对记号(Symbol)及记号表(SymbolList)的类成员和方法定义;
+\lstinputlisting{../src/Symbol.h}
+\subsection{Symbol.cpp}
+对记号(Symbol)及记号表(SymbolList)的类成员和方法实现;
+\lstinputlisting{../src/Symbol.cpp}
+\subsection{Lex.h}
+词法分析处理和输出类Lex的成员和方法定义;
+\lstinputlisting{../src/Lex.h}
+\subsection{Lex.cpp}
+词法分析处理和输出类Lex的成员和方法实现;
+\lstinputlisting{../src/Lex.cpp}

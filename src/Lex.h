@@ -49,7 +49,9 @@ class Lex {
     }
     bool is_letter() { return (isalpha(ch) || ch == '_'); }
     bool is_digit() { return (ch >= '0' && ch <= '9'); }
-    bool is_keyword() { return (keywords.find(bufStr) != keywords.end()); }
+    bool is_keyword() {
+      return (keywords.find(bufStr) != keywords.end());
+    }
     void cat() {
         bufStr.push_back(ch);
     } // concat ch to the end of bufStr.
@@ -62,8 +64,8 @@ class Lex {
             numChar--;
         }
         // decrease line counter when
-        // ch is end of line symbol ';'
-        if (ch == ';') {
+        // ch is end of line symbol '\n'
+        if (ch == '\n') {
             numLines--;
         }
     }
@@ -71,7 +73,7 @@ class Lex {
     void addSymbol(const string &notation, const string &property = "") {
         Symbol sym(notation, property);
         sl.add(sym);
-        cout << sym.toString();
+        cout << "L" << numLines+1 << ": " << sym.toString() << endl;
     }
 
     // log zone
