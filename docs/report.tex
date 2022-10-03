@@ -5,6 +5,7 @@
 \usepackage{xcolor}
 
 \usepackage[a4paper, left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage{fancyhdr} % header and footer
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
 \usepackage{amsmath}
@@ -35,6 +36,14 @@
 \input{title/title.tex}
 \tableofcontents
 \newpage
+
+% set page stype to fancy then decorate it
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LE, RO]{吴清柳 2020211597}
+\fancyhead[LO, RE]{C语言词法分析程序的设计与实现}
+\fancyfoot{} % clear all footer fileds
+\fancyfoot[CE, CO]{\thepage}
 
 \section{题目及要求}
 \input{content/1.tex}
