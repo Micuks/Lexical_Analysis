@@ -15,16 +15,16 @@
 ## 项目文件结构
 
 ```bash
-├── CMakeLists.txt
-├── docs
-│   ├── code_lists
-│   │   ├── sin_1
-│   │   ├── sin_1_flex
-│   │   ├── sin_1_output
-│   │   ├── sin_2
-│   │   ├── sin_2_flex
-│   │   └── sin_2_output
-│   ├── content
+├── CMakeLists.txt // CMakeLists
+├── docs // 课程设计报告目录
+│   ├── code_lists // 测试样例, 以及c++和flex的测试输出
+│   │   ├── sin_1 // 测试样例1
+│   │   ├── sin_1_flex // flex版本对测试样例1的输出
+│   │   ├── sin_1_output // c++版本对测试样例1的输出
+│   │   ├── sin_2 // 测试样例2
+│   │   ├── sin_2_flex // 同样例1
+│   │   └── sin_2_output // 同样例1
+│   ├── content // 各章节tex源文件
 │   │   ├── 1.tex
 │   │   ├── 2.tex
 │   │   ├── 3.tex
@@ -34,18 +34,18 @@
 │   │   ├── 7.tex
 │   │   ├── 8.tex
 │   │   └── 9.tex
-│   ├── figures
+│   ├── figures // 课程设计报告中用到的图片
 │   │   ├── Page0.png
 │   │   └── Page1.png
-│   ├── report.pdf
-│   ├── report.tex
-│   └── title
+│   ├── report.pdf // 预先构建好的课程设计报告
+│   ├── report.tex // 课程设计报告主体
+│   └── title // 标题页
 │       ├── logo_bupt.png
 │       └── title.tex
-├── lex.i
-├── lex.yy.c
+├── lex.i // FLEX源程序
+├── lex.yy.c // 预先构建好的FLEX处理后得到的程序
 ├── readme.md
-└── src
+└── src // C++版本词法分析程序的源代码
     ├── Lex.cpp
     ├── Lex.h
     ├── Symbol.cpp
@@ -53,3 +53,26 @@
     ├── Util.h
     └── main.cpp
 ```
+
+## 编译和运行
+
+### C++版本
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./Lexical_analyser [$filename]
+```
+
+### FLEX 版本
+
+```bash
+flex lex.i
+clang lex.yy.c -o c_lex
+./c_lex $filename
+```
+
+其中, $filename 可以选择 docs/code_lists/sin_1 和 docs/code_lists/sin_2, 或者
+其他任意的 c 源文件.
