@@ -1,3 +1,14 @@
 
 .vscode/tasks.json
 build
+.cache/clangd/index
+docs/report.aux
+docs/.DS_Store
+docs/report.xdv
+docs/report.toc
+docs/report.pdf
+docs/report.out
+docs/report.log
+docs/report.fls
+docs/report.fdb_latexmk
+.DS_Store
